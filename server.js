@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5000;
 const { Kayn, REGIONS } = require('kayn');
-const kayn = Kayn('RGAPI-44eacffa-bc59-48e2-9e39-415a8a459590')({
+const kayn = Kayn('RGAPI-e9931ad8-ebde-4f69-b06f-11caefc970c1')({
     region: REGIONS.NORTH_AMERICA,
     apiURLPrefix: 'https://%s.api.riotgames.com',
     locale: 'en_US',
@@ -49,7 +49,7 @@ const main = async kayn => {
 };
 
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     main(kayn).then( names => {
         res.json(names);
     });

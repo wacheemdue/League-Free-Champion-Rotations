@@ -1,0 +1,13 @@
+
+.row {
+  clear: both
+}
+
+.column {
+  width: 25%;
+  float: left;
+}
+
+.newList{
+  color: black;
+}
